@@ -1,0 +1,106 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #545454; }
+
+.hero {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  .hero::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.hero__banner {
+  background: url(http://place-hold.it/) #dbdbdb center top no-repeat;
+  background-size: cover;
+  padding: 10em 0 2em;
+  border-bottom: 1px solid #a8a8a8; }
+
+.hero__title {
+  text-align: center;
+  font-size: 2rem; }
+
+.content-box {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .content-box::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .content-box h2 {
+    font-size: 1.225rem;
+    text-align: center;
+    padding: 2em 0; }
+
+.content-box--full {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-right: 0; }
+  .content-box--full:last-child {
+    margin-right: 0; }
+
+.content-box--left {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%; }
+  .content-box--left:last-child {
+    margin-right: 0; }
+
+.content-box--right {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0; }
+  .content-box--right:last-child {
+    margin-right: 0; }

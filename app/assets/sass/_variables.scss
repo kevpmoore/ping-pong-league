@@ -1,0 +1,12 @@
+$font-stack: Helvetica, Arial, sans-serif;
+$font-base: 1rem;
+$font-size-sml: 0.875rem;
+$font-size-med: 1.225rem;
+$font-size-lrg: 2rem;
+
+$default-color: #a8a8a8;
+$font-color: #545454;
+$light-color: lighten($default-color, 20%);
+$dark-color: darken($default-color, 80%);
+
+$gutter-in-container: 2rem;
