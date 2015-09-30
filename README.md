@@ -17,6 +17,9 @@ You should be able to add and remove games from the league (it’s ok to lose th
 You should see a league table showing the top 5 players.
 You should see a list of game results.
 
+
+[Ping Pong scoring](https://en.wikipedia.org/wiki/Table_tennis#Scoring)
+
 ### User stories
 
 
@@ -24,8 +27,13 @@ You should see a list of game results.
 
 
 
-## Technologies used
-
+## Technologies/resources used
+* Node.js
+* Express.js
+* AngularJS
+* HTML
+* Sass
+* Bourbon Neat
 
 
 ## Further improvements

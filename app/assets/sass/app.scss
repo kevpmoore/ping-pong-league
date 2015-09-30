@@ -1,13 +1,14 @@
 @import "bourbon";
 @import "neat";
 
-@import "reset";
-@import "variables";
-// @import "_mixins.scss";
+@import "partials/normalize";
+@import "partials/variables";
+@import "partials/responsive";
 
 body {
   font-family: $font-stack;
   color: $font-color;
+  font-weight: normal;
 }
 
 .hero {
@@ -18,33 +19,63 @@ body {
   background: url(http://place-hold.it/) $light-color center top no-repeat;
   background-size: cover;
   padding: 10em 0 2em;
-  border-bottom: 1px solid $default-color;
-}
 
-.hero__title {
-  text-align: center;
-  font-size: $font-size-lrg;
-}
-
-.content-box {
-  @include outer-container;
-  h2 {
-    font-size: $font-size-med;
-    text-align: center;
+  @include media($mobile) {
     padding: 2em 0;
   }
 }
 
-.content-box--full {
+.hero__title {
+  text-align: center;
+  font-size: $font-size-xl;
+
+  @include media($mobile) {
+    font-size: $font-size-lrg;
+  }
+}
+
+.container {
+  @include outer-container(100%);
+
+  h2 {
+    font-size: $font-size-med;
+    text-align: center;
+    padding-bottom: 2em;
+  }
+}
+
+.container--full {
   @include span-columns(12);
   @include omega();
 }
 
-.content-box--left {
-  @include span-columns(6);
+.container--left,
+.container--right {
+  @include media($desktop) {
+    @include span-columns(6, block-collapse);
+  }
+
+  @include media($tablet) {
+    @include span-columns(6, block-collapse);
+  }
+
+  @include media($mobile) {
+    @include span-columns(12);
+  }
 }
 
-.content-box--right {
-  @include span-columns(6);
+.container--right {
   @include omega();
+  border-left: 1px solid $default-color;
+
+  @include media($mobile) {
+    border-bottom: 1px solid $default-color;
+  }
+}
+
+.container--full,
+.container--left,
+.container--right {
+  border-top: 1px solid $default-color;
+  padding: $gutter-in-block;
 }

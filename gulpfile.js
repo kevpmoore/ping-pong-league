@@ -1,5 +1,8 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
+    concat    = require('gulp-concat'),
+    minifyCSS = require('gulp-minify-css'),
+    rename    = require('gulp-rename'),
     neat = require('node-neat').includePaths;
 
 gulp.task('styles', function() {
@@ -7,6 +10,11 @@ gulp.task('styles', function() {
     .pipe(sass({
       includePaths: ['styles'].concat(neat)
     }))
+    .pipe(gulp.dest('./app/assets/css'))
+    .pipe(concat('app.css'))
+    .pipe(gulp.dest('./app/assets/css'))
+    .pipe(minifyCSS())
+    .pipe(rename('app.min.css'))
     .pipe(gulp.dest('./app/assets/css'));
 });
 

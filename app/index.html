@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="LeagueTable">
   <head>
     <meta charset="utf-8">
     <title>Ping Pong League Table</title>
-    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/app.min.css">
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/leagueController.js"></script>
+    <script src="/js/getPlayerDetails.js"></script>
   </head>
-  <body>
+  <body ng-controller="LeagueTableController as ctrl">
 
     <header class="hero" role="banner">
       <div class="hero__banner">
@@ -13,16 +18,33 @@
       </div>
     </header>
 
-    <main class="content-box" role="main">
-      <section class="content-box--full">
+    <main class="container" role="main">
+      <section class="container--full">
         <h2>Leaderboard:</h2>
+        <table>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Won</th>
+            <th>Lost</th>
+            <th>Points</th>
+          </tr>
+          <tr ng-repeat="player in ctrl.allPlayers" ng-repeat='i in ctrl.getNumber(ctrl.playerCounter) track by $index'>
+            <td>{{$index + 1}}</td>
+            <td>{{ player.name}}</td>
+            <td>{{ player.won}}</td>
+            <td>{{ player.lost}}</td>
+            <td>{{ player.points}}</td>
+          </tr>
+    </table>
       </section>
 
-      <section class="content-box--left">
+      <section class="container--left">
         <h2>Latest games</h2>
+
       </section>
 
-      <section class="content-box--right">
+      <section class="container--right">
         <h2>Add games</h2>
       </section>
     </main>
