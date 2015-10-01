@@ -61,17 +61,7 @@ body {
 }
 
 .container__table {
-  @include media($desktop) {
-    @include fill-parent();
-  }
-
-  @include media($tablet) {
-    @include span-columns(12);
-  }
-
-  @include media($mobile) {
-    @include span-columns(12);
-  }
+  @include fill-parent();
 }
 
 .container__sect--left,
@@ -83,7 +73,7 @@ body {
   }
 
   @include media($tablet) {
-    @include span-columns(6, block-collapse);
+    @include span-columns(12);
   }
 
   @include media($mobile) {

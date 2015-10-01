@@ -404,7 +404,8 @@ th {
 
 .form-input__select {
   background: #fff url(../img/down-arrow.png) no-repeat 95% center;
-  padding: 0.5em 0.75em;
+  padding: 0 0.75em;
+  margin-bottom: .5em;
   border: 1px solid #dbdbdb;
   border-radius: 0; }
 
@@ -491,27 +492,8 @@ body {
   .container__sect--full:last-child {
     margin-right: 0; }
 
-@media screen and (min-width: 760px) {
-  .container__table {
-    width: 100%; } }
-
-@media screen and (min-width: 480px) and (max-width: 760px) {
-  .container__table {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .container__table:last-child {
-      margin-right: 0; } }
-
-@media screen and (max-width: 480px) {
-  .container__table {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .container__table:last-child {
-      margin-right: 0; } }
+.container__table {
+  width: 100%; }
 
 .container__sect--left,
 .container__sect--right {
@@ -530,10 +512,11 @@ body {
     .container__sect--right {
       float: left;
       display: block;
-      width: 51.17883%; }
+      margin-right: 2.35765%;
+      width: 100%; }
       .container__sect--left:last-child,
       .container__sect--right:last-child {
-        width: 48.82117%; } }
+        margin-right: 0; } }
   @media screen and (max-width: 480px) {
     .container__sect--left,
     .container__sect--right {

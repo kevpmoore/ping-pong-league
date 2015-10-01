@@ -15,7 +15,8 @@
 
 .form-input__select {
   background: #fff url(../img/down-arrow.png) no-repeat 95% center;
-  padding: .5em .75em;
+  padding: 0 .75em;
+  margin-bottom: .5em;
   border: 1px solid $light-color;
   border-radius: 0;
 }
