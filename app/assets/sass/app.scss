@@ -1,14 +1,16 @@
 @import "bourbon";
 @import "neat";
 
+@import "partials/base";
 @import "partials/normalize";
-@import "partials/variables";
 @import "partials/responsive";
+@import "partials/buttons";
+@import "partials/form";
 
 body {
   font-family: $font-stack;
   color: $font-color;
-  font-weight: normal;
+  font-size: $font-base;
 }
 
 .hero {
@@ -28,6 +30,7 @@ body {
 .hero__title {
   text-align: center;
   font-size: $font-size-xl;
+  font-weight: normal;
 
   @include media($mobile) {
     font-size: $font-size-lrg;
@@ -36,21 +39,24 @@ body {
 
 .container {
   @include outer-container(100%);
-
-  h2 {
-    font-size: $font-size-med;
-    text-align: center;
-    padding-bottom: 2em;
-  }
 }
 
-.container--full {
+.container__header {
+  font-size: $font-size-med;
+  text-align: center;
+  padding-bottom: 1em;
+  font-weight: normal;
+}
+
+.container__sect--full {
   @include span-columns(12);
   @include omega();
 }
 
-.container--left,
-.container--right {
+.container__sect--left,
+.container__sect--right {
+  text-align: center;
+
   @include media($desktop) {
     @include span-columns(6, block-collapse);
   }
@@ -64,7 +70,7 @@ body {
   }
 }
 
-.container--right {
+.container__sect--right {
   @include omega();
   border-left: 1px solid $default-color;
 
@@ -73,9 +79,11 @@ body {
   }
 }
 
-.container--full,
-.container--left,
-.container--right {
+.container__sect--full,
+.container__sect--left,
+.container__sect--right {
   border-top: 1px solid $default-color;
   padding: $gutter-in-block;
 }
+
+.list {}

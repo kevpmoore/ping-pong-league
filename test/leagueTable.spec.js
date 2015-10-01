@@ -23,8 +23,8 @@ describe('LeagueTableController', function() {
   }));
 
   beforeEach(function(){
-    player1 = {name:'Arnold', won: 43, lost: 3, points: 80};
-    player2 = {name:'Bradley', won: 51, lost: 12, points: 78};
+    player1 = {name:'Arnold Smith', won: 43, lost: 3, points: 80};
+    player2 = {name:'Bradley Barton', won: 51, lost: 12, points: 78};
   });
 
   var players = [
@@ -52,12 +52,12 @@ describe('LeagueTableController', function() {
 
   describe('add to game results', function() {
     it('adds game to the game results array', function() {
-      // ctrl.addGame(cardigan);
-      // expect(ctrl.shoppingCart[0].name).toEqual('Mohair cardigan');
+      // ctrl.addGame();
+      // expect(ctrl.gameResults[0].name).toEqual('Arnold Smith');
     });
     it('does not add the game to the game results array if scores have not be inputted', function(){
-      // ctrl.addGame(dress);
-      // expect(ctrl.shoppingCart).toEqual([]);
+      // ctrl.addGame();
+      // expect(ctrl.gameResults).toEqual([]);
     });
   });
 

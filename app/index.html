@@ -20,8 +20,8 @@
     </header>
 
     <main class="container" role="main">
-      <section class="container--full">
-        <h2>Leaderboard:</h2>
+      <section class="container__sect--full">
+        <h2 class="container__header">Leaderboard:</h2>
         <table>
           <tr>
             <th>#</th>
@@ -40,36 +40,43 @@
     </table>
       </section>
 
-      <section class="container--left">
-        <h2>Latest games</h2>
+      <section class="container__sect--left">
+        <h2 class="container__header">Latest games</h2>
         <ul class="">
           <li ng-repeat="game in ctrl.gameResults track by $index | orderBy: 'created_at':true">
             {{game.player1Name}}
-            {{game.player2Name}}
             {{game.score1}}
+            {{game.player2Name}}
             {{game.score2}}
 
-            <!-- todo in toDoCtrl.toDoList track by $index -->
 
           <!-- <span class='close' id="delete-btn" aria-hidden='true' ng-click="toDoCtrl.deleteTask(todo)">&times;</span> -->
       </li>
     </ul>
       </section>
 
-      <section class="container--right">
-        <h2>Add games</h2>
+      <section class="container__sect--right">
+        <h2 class="container__header">Add games</h2>
 
-          <form role="form">
-            <select ng-model="ctrl.player1" ng-options="player.name for player in ctrl.allPlayers" placeholder="Look for player">
-            </select>
-            <span class="">vs</span>
-            <select ng-model="ctrl.player2" ng-options="player.name for player in ctrl.allPlayers" placeholder="Look for player">
-            </select>
-            <label for="scores">Score:</label>
-            <input type="text" ng-model="ctrl.scores.player1" />
-            <span>&#151;</span>
-            <input type="text" ng-model="ctrl.scores.player2" />
-            <button type="submit" ng-click="ctrl.addGame()">Add game</button>
+          <form name="game" role="form">
+            <div class="form-input">
+              <select class="form-input__select" ng-model="ctrl.player1" ng-options="player.name for player in ctrl.allPlayers">
+                <option ng-show="!model" value="">Look for player</option>
+              </select>
+              <span class="form-input__copy--med">vs</span>
+              <select class="form-input__select" ng-model="ctrl.player2" ng-options="player.name for player in ctrl.allPlayers">
+                <option class="form-input__option" ng-show="!model" value="">Look for player</option>
+              </select>
+            </div>
+            <div class="form-input">
+              <label for="scores" class="form-input__label">Score (max. of 5)</label>
+              <input class="form-input__field" type="text" ng-model="ctrl.scores.player1" />
+              <span>&ndash;</span>
+              <input class="form-input__field" type="text" ng-model="ctrl.scores.player2" />
+            </div>
+            <div class="form-input">
+              <button class="btn form-input__btn--primary" type="submit" ng-click="ctrl.addGame()">Add game</button>
+            </div>
           </form>
 
       </section>

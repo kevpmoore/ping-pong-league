@@ -1,0 +1,51 @@
+.form-input {
+  padding: 0 0 1.5em;
+}
+
+.form-input__select,
+.form-input__field {
+  height: 2.5em;
+  margin: 0 1em;
+  font-size: $font-size-sml;
+
+  &:focus {
+    outline: 1px solid #5cd9bc;
+  }
+}
+
+.form-input__select {
+  background: #fff url(../img/down-arrow.png) no-repeat 95% center;
+  padding: 0.5em 0.75em;
+  border: 1px solid $light-color;
+  border-radius: 0;
+}
+
+.form-input__option {
+  color: $light-color;
+}
+
+.form-input__field {
+  width: 3.5em;
+}
+
+.form-input__copy--med {
+  font-size: $font-size-med;
+}
+
+.form-input__label {
+  font-size: $font-size-xs;
+  display: block;
+  padding-bottom: 0.5em;
+}
+
+.form-input__btn--primary {
+  background-color: #80e1cb;
+  color: #fff;
+  padding: 0.5em 1em;
+  border: none;
+
+  &:hover {
+    color: #fefefe;
+    background-color: #5cd9bc;
+  }
+}

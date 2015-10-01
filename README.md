@@ -38,10 +38,10 @@ You should see a list of game results.
 
 ## Further improvements
 
-* E2E testing to check order by functionality in the player leaderboard
-* remove global controller and separate components into modular structure according to function, define both a Player and a Game module - better separation of responsibilities. This will be useful as the app gets more complicated with the addition of more features
+* E2E testing to check order by functionality in the player leaderboard and latest games sections, to ensure the latest game inputted shows at the top and that the player with the highest score shows at the top
 * Improve unit test coverage
-* Add controls on form to ensure users cannot add games when the form fields have not been completed correctly - ie if same name is used, or if the same scores have been inputted
+* Remove global controller and separate components into modular structure according to function, define both a Player and a Game module - better separation of responsibilities. This will be useful as the app gets more complicated with the addition of more features
+* Add form validation to ensure users cannot add games when the form fields have not been completed correctly - with good UX for error message (remove all alert boxes)
 
 
 

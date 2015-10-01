@@ -279,6 +279,35 @@ select {
   text-transform: none;
 }
 
+select {
+  background-color: none;
+  border: none;
+  border-image-source: none;
+  border-image-slice: none;
+  border-image-width: none;
+  border-image-outset: none;
+  border-image-repeat: none;
+}
+
+button:focus, select:focus {
+  outline: none
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  // Removes default arrow from firefox
+  text-indent: 0.01px;
+  text-overflow: "";
+
+  // Removes default arrow from IE10+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
 /**
  * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
  *    and `video` controls.
@@ -291,7 +320,7 @@ button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button; /* 2 */
+  -webkit-appearance: none; /* 2 */
   cursor: pointer; /* 3 */
 }
 
