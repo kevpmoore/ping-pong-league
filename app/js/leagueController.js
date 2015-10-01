@@ -38,7 +38,8 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
       player1Name: league.player1.name,
       player2Name: league.player2.name,
       score1: league.scores.player1,
-      score2: league.scores.player2
+      score2: league.scores.player2,
+      created_at: Date.now()
     });
 
     console.log(league.gameResults);
@@ -60,9 +61,6 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
     league.gameResults.splice(index, 1);
   };
 
-  league.orderGames = function() {
-    // get index of each game and then use to filter order by index in reverse for latest games section and ordering
-  };
 
   league.checkPlayers = function() {
     if (!league.player1 || league.player1 === '' || !league.player2 || league.player2 === '') {

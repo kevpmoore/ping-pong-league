@@ -18,7 +18,7 @@ body {
 }
 
 .hero__banner {
-  background: url(http://place-hold.it/) $light-color center top no-repeat;
+  background: url(http://place-hold.it/) $light-grey center top no-repeat;
   background-size: cover;
   padding: 10em 0 2em;
 
@@ -53,6 +53,10 @@ body {
 .container__sect--right {
   border-top: 1px solid $default-color;
   padding: $gutter-in-block;
+
+  @include media($mobile) {
+    padding: $gutter-mobile;
+  }
 }
 
 .container__sect--full {
@@ -91,7 +95,7 @@ body {
 }
 
 .grid__head-row {
-  background-color: $light-color;
+  background-color: $mid-grey;
 }
 
 .grid__cells td,

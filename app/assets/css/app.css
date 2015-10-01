@@ -482,6 +482,11 @@ body {
 .container__sect--right {
   border-top: 1px solid #a8a8a8;
   padding: 2rem; }
+  @media screen and (max-width: 480px) {
+    .container__sect--full,
+    .container__sect--left,
+    .container__sect--right {
+      padding: 1rem; } }
 
 .container__sect--full {
   float: left;
@@ -536,7 +541,7 @@ body {
       border-bottom: 1px solid #a8a8a8; } }
 
 .grid__head-row {
-  background-color: #dbdbdb; }
+  background-color: #c2c2c2; }
 
 .grid__cells td,
 .grid__cells th {

@@ -8,7 +8,9 @@ $font-size-xl: 2.5rem;
 
 $default-color: #a8a8a8;
 $font-color: #545454;
-$light-color: lighten($default-color, 20%);
-$dark-color: darken($default-color, 80%);
+$light-grey: lighten($default-color, 20%);
+$mid-grey: lighten($default-color, 10%);
+$dark-grey: darken($default-color, 80%);
 
 $gutter-in-block: 2rem;
+$gutter-mobile: 1rem;

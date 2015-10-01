@@ -43,7 +43,7 @@
       <section class="container__sect--left">
         <h2 class="container__header">Latest games</h2>
         <ul class="list">
-          <li class="list__item" ng-repeat="game in ctrl.gameResults track by $index | limitTo: 5 | orderBy:'created_at':true">
+          <li class="list__item" ng-repeat="game in ctrl.gameResults | limitTo: 5 | orderBy: '-created_at'">
             {{game.player1Name}}
             {{game.score1}}
             &ndash;
