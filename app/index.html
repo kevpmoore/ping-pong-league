@@ -22,8 +22,8 @@
     <main class="container" role="main">
       <section class="container__sect--full">
         <h2 class="container__header">Leaderboard:</h2>
-        <table>
-          <tr>
+        <table class="container__table grid__cells">
+          <tr class="grid__head-row">
             <th>#</th>
             <th>Name</th>
             <th>Won</th>
@@ -37,22 +37,21 @@
             <td>{{player.lost}}</td>
             <td>{{player.points}}</td>
           </tr>
-    </table>
+        </table>
       </section>
 
       <section class="container__sect--left">
         <h2 class="container__header">Latest games</h2>
-        <ul class="">
-          <li ng-repeat="game in ctrl.gameResults track by $index | orderBy: 'created_at':true">
+        <ul class="list">
+          <li class="list__item" ng-repeat="game in ctrl.gameResults track by $index | limitTo: 5 | orderBy:'created_at':true">
             {{game.player1Name}}
             {{game.score1}}
-            {{game.player2Name}}
+            &ndash;
             {{game.score2}}
-
-
-          <!-- <span class='close' id="delete-btn" aria-hidden='true' ng-click="toDoCtrl.deleteTask(todo)">&times;</span> -->
-      </li>
-    </ul>
+            {{game.player2Name}}
+          <img class="list__icon--remove" ng-click="ctrl.deleteGame(game)" src="/assets/img/bin.png" alt="Delete game" />
+          </li>
+        </ul>
       </section>
 
       <section class="container__sect--right">
@@ -78,9 +77,8 @@
               <button class="btn form-input__btn--primary" type="submit" ng-click="ctrl.addGame()">Add game</button>
             </div>
           </form>
-
       </section>
-    </main>
 
+    </main>
   </body>
 </html>

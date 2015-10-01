@@ -15,7 +15,7 @@
 
 .form-input__select {
   background: #fff url(../img/down-arrow.png) no-repeat 95% center;
-  padding: 0.5em 0.75em;
+  padding: .5em .75em;
   border: 1px solid $light-color;
   border-radius: 0;
 }
@@ -35,13 +35,13 @@
 .form-input__label {
   font-size: $font-size-xs;
   display: block;
-  padding-bottom: 0.5em;
+  padding-bottom: .5em;
 }
 
 .form-input__btn--primary {
   background-color: #80e1cb;
   color: #fff;
-  padding: 0.5em 1em;
+  padding: .5em 1em;
   border: none;
 
   &:hover {

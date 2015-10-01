@@ -420,7 +420,7 @@ th {
 .form-input__label {
   font-size: 0.675rem;
   display: block;
-  padding-bottom: 0.5em; }
+  padding-bottom: .5em; }
 
 .form-input__btn--primary {
   background-color: #80e1cb;
@@ -476,6 +476,12 @@ body {
   padding-bottom: 1em;
   font-weight: normal; }
 
+.container__sect--full,
+.container__sect--left,
+.container__sect--right {
+  border-top: 1px solid #a8a8a8;
+  padding: 2rem; }
+
 .container__sect--full {
   float: left;
   display: block;
@@ -484,6 +490,28 @@ body {
   margin-right: 0; }
   .container__sect--full:last-child {
     margin-right: 0; }
+
+@media screen and (min-width: 760px) {
+  .container__table {
+    width: 100%; } }
+
+@media screen and (min-width: 480px) and (max-width: 760px) {
+  .container__table {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .container__table:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 480px) {
+  .container__table {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .container__table:last-child {
+      margin-right: 0; } }
 
 .container__sect--left,
 .container__sect--right {
@@ -524,8 +552,26 @@ body {
     .container__sect--right {
       border-bottom: 1px solid #a8a8a8; } }
 
-.container__sect--full,
-.container__sect--left,
-.container__sect--right {
-  border-top: 1px solid #a8a8a8;
-  padding: 2rem; }
+.grid__head-row {
+  background-color: #dbdbdb; }
+
+.grid__cells td,
+.grid__cells th {
+  padding: .5em;
+  border: 1px solid #a8a8a8;
+  text-align: center; }
+
+.list {
+  padding: 0; }
+
+.list__item {
+  list-style: none;
+  padding: 0 0 1em;
+  font-size: 1rem; }
+
+.list__icon--remove {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: .5em; }

@@ -42,6 +42,7 @@ You should see a list of game results.
 * Improve unit test coverage
 * Remove global controller and separate components into modular structure according to function, define both a Player and a Game module - better separation of responsibilities. This will be useful as the app gets more complicated with the addition of more features
 * Add form validation to ensure users cannot add games when the form fields have not been completed correctly - with good UX for error message (remove all alert boxes)
+* Add gravatars for players and show in league table and latest game results
 
 
 

@@ -41,6 +41,8 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
       score2: league.scores.player2
     });
 
+    console.log(league.gameResults);
+
     league.resetGameForm();
   };
 
@@ -51,6 +53,15 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
       player1: 0,
       player2: 0
     };
+  };
+
+  league.deleteGame = function(game) {
+    var index = league.gameResults.indexOf(game);
+    league.gameResults.splice(index, 1);
+  };
+
+  league.orderGames = function() {
+    // get index of each game and then use to filter order by index in reverse for latest games section and ordering
   };
 
   league.checkPlayers = function() {
