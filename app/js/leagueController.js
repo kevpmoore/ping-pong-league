@@ -2,11 +2,17 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
 
   var league = this;
 
-  league.allPlayers = [ ];
+  league.allPlayers = [];
 
-  // $http.get('../data/playerData.json').success(function(response){
-  //   league.allPlayers = response;
-  // });
+  league.gameResults = [];
+
+  league.player1 = '';
+  league.player2 = '';
+  league.scores = {
+    player1: 0,
+    player2: 0
+  };
+
 
   GetPlayerDetails.get().then(function (response) {
     league.allPlayers = response.data;
@@ -16,19 +22,54 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
     return new Array(num);
   };
 
-  league.playerCounter = function () {
+  league.playerCounter = function() {
     return league.allPlayers.length;
   };
 
-  // self.addToDo = function() {
-  //   if(!self.newToDo || self.newToDo === '') {
-  //     return;
-  //   }
-  //   self.toDoList.push( {task: self.newToDo, completed: false} );
-  //   self.newToDo = '';
-  // };
-  //
 
+  // Add and delete games //
 
+  league.addGame = function() {
+    league.checkPlayers();
+    league.checkScores();
+    // create checkWinner function and increament won count for that player
+
+    league.gameResults.push({
+      player1Name: league.player1.name,
+      player2Name: league.player2.name,
+      score1: league.scores.player1,
+      score2: league.scores.player2
+    });
+
+    league.resetGameForm();
+  };
+
+  league.resetGameForm = function() {
+    league.player1 = '';
+    league.player2 = '';
+    league.scores = {
+      player1: 0,
+      player2: 0
+    };
+  };
+
+  league.checkPlayers = function() {
+    if (!league.player1 || league.player1 === '' || !league.player2 || league.player2 === '') {
+      alert('Please add players');
+      return;
+    }
+    if (league.player1 === league.player2) {
+      alert('Please make sure the players names are not the same');
+      return;
+    }
+  };
+
+  league.checkScores = function() {
+    if (league.scores.player1 < 0 || league.scores.player1 > 5 || league.scores.player2 < 0 || league.scores.player2 > 5) {
+      alert('Please enter a valid number');
+      return;
+    }
+    // check to make sure an integer is entered
+  };
 
 }]);

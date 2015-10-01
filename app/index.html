@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Ping Pong League Table</title>
     <link rel="stylesheet" href="/assets/css/app.min.css">
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-resource/angular-resource.js"></script>
     <script src="/js/app.js"></script>
@@ -29,23 +30,48 @@
             <th>Lost</th>
             <th>Points</th>
           </tr>
-          <tr ng-repeat="player in ctrl.allPlayers" ng-repeat='i in ctrl.getNumber(ctrl.playerCounter) track by $index'>
+          <tr ng-repeat="player in ctrl.allPlayers | orderBy:'points':true" ng-repeat="i in ctrl.getNumber(ctrl.playerCounter) track by $index">
             <td>{{$index + 1}}</td>
-            <td>{{ player.name}}</td>
-            <td>{{ player.won}}</td>
-            <td>{{ player.lost}}</td>
-            <td>{{ player.points}}</td>
+            <td>{{player.name}}</td>
+            <td>{{player.won}}</td>
+            <td>{{player.lost}}</td>
+            <td>{{player.points}}</td>
           </tr>
     </table>
       </section>
 
       <section class="container--left">
         <h2>Latest games</h2>
+        <ul class="">
+          <li ng-repeat="game in ctrl.gameResults track by $index | orderBy: 'created_at':true">
+            {{game.player1Name}}
+            {{game.player2Name}}
+            {{game.score1}}
+            {{game.score2}}
 
+            <!-- todo in toDoCtrl.toDoList track by $index -->
+
+          <!-- <span class='close' id="delete-btn" aria-hidden='true' ng-click="toDoCtrl.deleteTask(todo)">&times;</span> -->
+      </li>
+    </ul>
       </section>
 
       <section class="container--right">
         <h2>Add games</h2>
+
+          <form role="form">
+            <select ng-model="ctrl.player1" ng-options="player.name for player in ctrl.allPlayers" placeholder="Look for player">
+            </select>
+            <span class="">vs</span>
+            <select ng-model="ctrl.player2" ng-options="player.name for player in ctrl.allPlayers" placeholder="Look for player">
+            </select>
+            <label for="scores">Score:</label>
+            <input type="text" ng-model="ctrl.scores.player1" />
+            <span>&#151;</span>
+            <input type="text" ng-model="ctrl.scores.player2" />
+            <button type="submit" ng-click="ctrl.addGame()">Add game</button>
+          </form>
+
       </section>
     </main>
 
