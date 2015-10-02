@@ -51,8 +51,6 @@ To confirm who the best ping pong player is we need to create a web application 
 
 
 
-
-
 ## How to install & run
 
 You will need to have Node (with npm) and Bower installed

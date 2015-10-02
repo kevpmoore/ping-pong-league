@@ -11,7 +11,6 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
     player2: null
   };
 
-
   GetPlayerDetails.get().then(function (response) {
     league.allPlayers = response.data;
   });
@@ -24,13 +23,9 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
     return league.allPlayers.length;
   };
 
-
-  // Add and delete games //
-
   league.addGame = function() {
     league.checkPlayers();
     league.checkScores();
-    // create checkWinner function and increament won count for that player
 
     league.gameResults.push({
       player1Name: league.player1.name,
@@ -39,8 +34,6 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
       score2: league.scores.player2,
       created_at: Date.now()
     });
-
-    console.log(league.gameResults);
 
     league.resetGameForm();
   };
@@ -79,7 +72,6 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
       alert('Please enter a valid number');
       return;
     }
-    // add NaN check here
   };
 
 }]);

@@ -35,7 +35,7 @@
           <tbody>
             <tr ng-repeat="player in ctrl.allPlayers | orderBy:'points':true" ng-repeat="i in ctrl.getNumber(ctrl.playerCounter) track by $index">
               <td class="grid__cells">{{$index + 1}}</td>
-              <td class="grid__cells grid__cells--pull-left"><img src="{{player.image}}" class="media__img--gravatar">{{player.name}}</td>
+              <td class="grid__cells grid__cells--pull-left"><img class="media__img--gravatar" src="{{player.image}}" alt="player gravatar">{{player.name}}</td>
               <td class="grid__cells">{{player.won}}</td>
               <td class="grid__cells">{{player.lost}}</td>
               <td class="grid__cells">{{player.points}}</td>
@@ -55,7 +55,7 @@
             {{game.player2Name}}
             <img class="list__icon--remove" ng-click="ctrl.deleteGame(game)" src="/assets/img/bin.png" alt="Delete game">
           </li>
-          <li class="list__item--no-data" ng-show="!ctrl.gameResults.length">No games added</li>
+          <li class="list__item--no-data" ng-show="!ctrl.gameResults.length">No games</li>
         </ul>
       </section>
 
