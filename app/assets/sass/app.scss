@@ -107,12 +107,16 @@ body {
 
 .list {
   padding: 0;
+  list-style: none;
 }
 
 .list__item {
-  list-style: none;
   padding: 0 0 1em;
   font-size: $font-base;
+}
+
+.list__item--no-data {
+  color: $mid-grey;
 }
 
 .list__icon--remove {
@@ -121,4 +125,10 @@ body {
   vertical-align: middle;
   display: inline-block;
   margin-left: .5em;
+}
+
+.list__item-- {
+  list-style: none;
+  padding: 0 0 1em;
+  font-size: $font-base;
 }
