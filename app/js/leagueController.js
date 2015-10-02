@@ -3,14 +3,12 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
   var league = this;
 
   league.allPlayers = [];
-
   league.gameResults = [];
-
   league.player1 = '';
   league.player2 = '';
   league.scores = {
-    player1: 0,
-    player2: 0
+    player1: null,
+    player2: null
   };
 
 
@@ -51,8 +49,8 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
     league.player1 = '';
     league.player2 = '';
     league.scores = {
-      player1: 0,
-      player2: 0
+      player1: null,
+      player2: null
     };
   };
 
@@ -61,6 +59,9 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
     league.gameResults.splice(index, 1);
   };
 
+  league.gameCounter = function() {
+    return league.gameResults.length;
+  };
 
   league.checkPlayers = function() {
     if (!league.player1 || league.player1 === '' || !league.player2 || league.player2 === '') {
@@ -78,7 +79,7 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
       alert('Please enter a valid number');
       return;
     }
-    // check to make sure an integer is entered
+    // add NaN check here
   };
 
 }]);

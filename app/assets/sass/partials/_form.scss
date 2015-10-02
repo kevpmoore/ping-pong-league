@@ -27,10 +27,12 @@
 
 .form-input__field {
   width: 3.5em;
+  text-align: center;
 }
 
 .form-input__copy--med {
   font-size: $font-size-med;
+  margin-bottom: .5em;
 }
 
 .form-input__label {

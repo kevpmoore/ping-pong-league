@@ -72,11 +72,11 @@ body {
 .container__sect--right {
   text-align: center;
 
-  @include media($desktop) {
+  @include media($lrg-desktop) {
     @include span-columns(6, block-collapse);
   }
 
-  @include media($tablet) {
+  @include media($sml-desktop) {
     @include span-columns(12);
   }
 
@@ -94,15 +94,15 @@ body {
   }
 }
 
-.grid__head-row {
-  background-color: $mid-grey;
-}
-
 .grid__cells td,
 .grid__cells th {
   padding: .5em;
   border: 1px solid $default-color;
   text-align: center;
+}
+
+.grid__head-row {
+  background-color: $mid-grey;
 }
 
 .list {

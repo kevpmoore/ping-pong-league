@@ -36,14 +36,16 @@ To confirm who the best ping pong player is we need to create a web application 
 
 * Add a method of persisting the data. Look into setting up a MongoDB database to store the player and match data so the app can be scaled up as needed. Alternatively look into local browser storage or a third party service such as Firebase.
 * E2E testing to check order by functionality in the player leaderboard and latest games sections, to ensure the latest game inputted shows at the top and that the player with the highest score shows at the top
-* Improve unit test coverage
+* Improve unit test coverage and make tests more robust
 * Remove global controller and separate components into modular structure according to function, define both a Player and a Game module - better separation of responsibilities. This will be useful as the app gets more complicated with the addition of more features
 * Add form validation to ensure users cannot add games when the form fields have not been completed correctly - with good UX for error message (remove all alert boxes)
 * Switch player select element to a text input field with autocomplete functionality
 * Add gravatars for players and show in league table and latest game results
 * Add a feature to autocomplete player names when adding a match
-* Use gulp to minify JS files
+* Bundle JS files into one single minified file, add as Gulp task (https://github.com/jonkemp/gulp-useref)
 * Display a list of tweets with the hashtag #pingpong
+* Add functionality to add new players
+* Use game results to calculate winner, loser and update the player points total accordingly (https://en.wikipedia.org/wiki/Table_tennis#Scoring)
 
 
 

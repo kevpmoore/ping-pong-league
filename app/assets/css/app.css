@@ -387,8 +387,7 @@ th {
   text-align: center;
   white-space: nowrap;
   border-width: 0.1rem;
-  border-radius: 0.1rem;
-  display: inline-box; }
+  border-radius: 0.1rem; }
 
 .form-input {
   padding: 0 0 1.5em; }
@@ -413,10 +412,12 @@ th {
   color: #dbdbdb; }
 
 .form-input__field {
-  width: 3.5em; }
+  width: 3.5em;
+  text-align: center; }
 
 .form-input__copy--med {
-  font-size: 1.225rem; }
+  font-size: 1.225rem;
+  margin-bottom: .5em; }
 
 .form-input__label {
   font-size: 0.675rem;
@@ -503,7 +504,7 @@ body {
 .container__sect--left,
 .container__sect--right {
   text-align: center; }
-  @media screen and (min-width: 760px) {
+  @media screen and (min-width: 900px) {
     .container__sect--left,
     .container__sect--right {
       float: left;
@@ -512,7 +513,7 @@ body {
       .container__sect--left:last-child,
       .container__sect--right:last-child {
         width: 48.82117%; } }
-  @media screen and (min-width: 480px) and (max-width: 760px) {
+  @media screen and (min-width: 480px) and (max-width: 900px) {
     .container__sect--left,
     .container__sect--right {
       float: left;
@@ -540,14 +541,14 @@ body {
     .container__sect--right {
       border-bottom: 1px solid #a8a8a8; } }
 
-.grid__head-row {
-  background-color: #c2c2c2; }
-
 .grid__cells td,
 .grid__cells th {
   padding: .5em;
   border: 1px solid #a8a8a8;
   text-align: center; }
+
+.grid__head-row {
+  background-color: #c2c2c2; }
 
 .list {
   padding: 0; }
