@@ -3,30 +3,35 @@
     "name":"Arnold Smith",
     "won":43,
     "lost":3,
-    "points":70
+    "points":70,
+    "image": "../assets/img/generic-gravatar.png"
   },
   {
     "name":"Bradley Barton",
     "won":51,
     "lost":12,
-    "points":88
+    "points":88,
+    "image": "../assets/img/generic-gravatar.png"
   },
  {
     "name":"Sally Simpson",
     "won":34,
     "lost":4,
-    "points":60
+    "points":60,
+    "image": "../assets/img/generic-gravatar.png"
   },
 {
     "name":"Bob Nemo",
     "won":107,
     "lost":78,
-    "points":58
+    "points":58,
+    "image": "../assets/img/generic-gravatar.png"
   },
 {
     "name":"Philippa Blackwell",
     "won":34,
     "lost":6,
-    "points":56
+    "points":56,
+    "image": "../assets/img/generic-gravatar.png"
   }
 ]

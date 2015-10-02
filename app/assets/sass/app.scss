@@ -94,15 +94,24 @@ body {
   }
 }
 
-.grid__cells td,
-.grid__cells th {
+.grid__head-row {
+  background-color: $mid-grey;
+}
+
+.grid__cells {
   padding: .5em;
   border: 1px solid $default-color;
   text-align: center;
 }
 
-.grid__head-row {
-  background-color: $mid-grey;
+.grid__cells--pull-left {
+  text-align: left;
+}
+
+.media__img--gravatar {
+  width: 1em;
+  height: 1em;
+  margin: 0 .5em;
 }
 
 .list {

@@ -39,6 +39,7 @@ To confirm who the best ping pong player is we need to create a web application 
 * Improve unit test coverage and make tests more robust
 * Remove global controller and separate components into modular structure according to function, define both a Player and a Game module - better separation of responsibilities. This will be useful as the app gets more complicated with the addition of more features
 * Add form validation for good UX (remove alerts used for testing). Ensure that users cannot add games when the form fields have not been completed correctly
+* Extend game form further by adding field to input individual set scores to game results
 * Switch player select element to a text input field with autocomplete functionality
 * Add gravatars for players and show in league table and latest game results
 * Add a feature to autocomplete player names when adding a match
@@ -46,6 +47,7 @@ To confirm who the best ping pong player is we need to create a web application 
 * Display a list of tweets with the hashtag #pingpong
 * Add functionality to add new players
 * Use game results to calculate winner, loser and update the player points total accordingly (https://en.wikipedia.org/wiki/Table_tennis#Scoring)
+* Add links to show more games in the 'Latest games' section and more players in the players leaderboard
 
 
 

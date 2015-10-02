@@ -25,20 +25,20 @@
         <table class="container__table grid__cells">
           <thead>
             <tr class="grid__head-row">
-              <th>#</th>
-              <th>Name</th>
-              <th>Won</th>
-              <th>Lost</th>
-              <th>Points</th>
+              <th class="grid__cells">#</th>
+              <th class="grid__cells grid__cells--pull-left">Name</th>
+              <th class="grid__cells">Won</th>
+              <th class="grid__cells">Lost</th>
+              <th class="grid__cells">Points</th>
             </tr>
           </thead>
           <tbody>
             <tr ng-repeat="player in ctrl.allPlayers | orderBy:'points':true" ng-repeat="i in ctrl.getNumber(ctrl.playerCounter) track by $index">
-              <td>{{$index + 1}}</td>
-              <td>{{player.name}}</td>
-              <td>{{player.won}}</td>
-              <td>{{player.lost}}</td>
-              <td>{{player.points}}</td>
+              <td class="grid__cells">{{$index + 1}}</td>
+              <td class="grid__cells grid__cells--pull-left"><img src="{{player.image}}" class="media__img--gravatar">{{player.name}}</td>
+              <td class="grid__cells">{{player.won}}</td>
+              <td class="grid__cells">{{player.lost}}</td>
+              <td class="grid__cells">{{player.points}}</td>
             </tr>
           </tbody>
         </table>
@@ -53,7 +53,7 @@
             &ndash;
             {{game.score2}}
             {{game.player2Name}}
-          <img class="list__icon--remove" ng-click="ctrl.deleteGame(game)" src="/assets/img/bin.png" alt="Delete game" />
+            <img class="list__icon--remove" ng-click="ctrl.deleteGame(game)" src="/assets/img/bin.png" alt="Delete game">
           </li>
           <li class="list__item--no-data" ng-show="!ctrl.gameResults.length">No games added</li>
         </ul>

@@ -541,14 +541,21 @@ body {
     .container__sect--right {
       border-bottom: 1px solid #a8a8a8; } }
 
-.grid__cells td,
-.grid__cells th {
+.grid__head-row {
+  background-color: #c2c2c2; }
+
+.grid__cells {
   padding: .5em;
   border: 1px solid #a8a8a8;
   text-align: center; }
 
-.grid__head-row {
-  background-color: #c2c2c2; }
+.grid__cells--pull-left {
+  text-align: left; }
+
+.media__img--gravatar {
+  width: 1em;
+  height: 1em;
+  margin: 0 0.5em; }
 
 .list {
   padding: 0;
