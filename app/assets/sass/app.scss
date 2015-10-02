@@ -112,6 +112,10 @@ body {
   width: 1em;
   height: 1em;
   margin: 0 .5em;
+
+  @include media($mobile) {
+    display: none;
+  }
 }
 
 .list {

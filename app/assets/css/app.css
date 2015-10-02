@@ -556,6 +556,9 @@ body {
   width: 1em;
   height: 1em;
   margin: 0 0.5em; }
+  @media screen and (max-width: 480px) {
+    .media__img--gravatar {
+      display: none; } }
 
 .list {
   padding: 0;
