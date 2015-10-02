@@ -1,7 +1,7 @@
 {
   "name": "ping_pong_league",
   "version": "1.0.0",
-  "description": "",
+  "description": "Ping pong league table application",
   "engines": {
     "node": "^0.12.7"
   },
@@ -10,7 +10,10 @@
     "start": "node app/server.js"
   },
   "main": "app/server.js",
-  "author": "",
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "author": "Lucy Oliphant",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -27,8 +30,5 @@
     "node-bourbon": "^4.2.3",
     "node-neat": "^1.7.2",
     "phantomjs": "^1.9.18"
-  },
-  "dependencies": {
-    "express": "^4.13.3"
   }
 }
