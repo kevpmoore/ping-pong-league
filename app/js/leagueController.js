@@ -11,6 +11,7 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
     player2: null
   };
 
+
   GetPlayerDetails.get().then(function (response) {
     league.allPlayers = response.data;
   });
@@ -34,7 +35,8 @@ leagueTable.controller('LeagueTableController', ['$http', 'GetPlayerDetails', fu
       score2: league.scores.player2,
       created_at: Date.now()
     });
-
+    // console.log(league.gameResults[0].player1Name);
+    // console.log(league.gameResults[0].score1);
     league.resetGameForm();
   };
 
