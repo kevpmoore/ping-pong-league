@@ -8,7 +8,7 @@ describe('LeagueTableController', function() {
   }));
 
   it('initialises with an empty array for players', function(){
-    expect(ctrl.allPlayers).toEqual([ ]);
+    expect(ctrl.allPlayers).toEqual([]);
   });
 
   var httpBackend;
@@ -24,16 +24,16 @@ describe('LeagueTableController', function() {
 
   var players = [
     {
-      "name":"Arnold Smith",
-      "won":43,
-      "lost":3,
-      "points":80
+      "name": "Arnold Smith",
+      "won": 43,
+      "lost": 3,
+      "points": 80
     },
     {
-      "name":"Bradley Barton",
-      "won":51,
-      "lost":12,
-      "points":78
+      "name": "Bradley Barton",
+      "won": 51,
+      "lost": 12,
+      "points": 78
     }
   ];
 
