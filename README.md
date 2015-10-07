@@ -9,7 +9,7 @@ To confirm who the best ping pong player is we need to create a web application 
 
 ## Implementation
 * Built as a single page application in JavaScript with AngularJS for quick prototype development
-* AngularJS is a good framework for a SPA like this, as it makes RESTful API interactions relatively seemless
+* AngularJS is a good framework for a SPA like this, as it makes RESTful API interactions relatively seamless
 * Player data is stored in a JSON file and called in using a service
 * To assist with building a responsive layout I used Bourbon Neat because it is lightweight and was helpful for speeding up common layout tasks
 
@@ -39,7 +39,7 @@ To confirm who the best ping pong player is we need to create a web application 
 * Add a method of persisting the data. Look into setting up a MongoDB database to store the player and match data so the app can be scaled up as needed. Alternatively look into local browser storage or a third party service such as Firebase
 * E2E testing to check order by functionality in the player leaderboard and latest games sections, to ensure the latest game inputted shows at the top and that the player with the highest score shows at the top
 * Improve unit test coverage and make tests more robust
-* Remove global controller and separate components into modular structure according to function, define both a Player and a Game module - better separation of responsibilities. This will be useful as the app gets more complicated with the addition of more features
+* Remove global controller and separate components into modular structure according to function, define both a Player and a Game models - better separation of responsibilities. This will be useful as the app gets more complicated with the addition of more features
 * Add form validation for good UX (remove alerts used for testing). Ensure that users cannot add games when the form fields have not been completed correctly
 * Extend game form further by adding field to input individual set scores to game results
 * Switch player select element to a text input field with autocomplete functionality
