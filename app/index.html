@@ -5,8 +5,8 @@
     <title>Ping Pong League Table</title>
     <link rel="stylesheet" href="/assets/css/app.min.css">
     <script src="../bower_components/jquery/dist/jquery.js" defer></script>
-    <script src="../bower_components/angular/angular.js" defer></script>
-    <script src="../bower_components/angular-resource/angular-resource.js" defer></script>
+    <script src="../bower_components/angular/angular.js" ></script>
+    <script src="../bower_components/angular-resource/angular-resource.js" ></script>
     <script src="/js/app.js" defer></script>
     <script src="/js/leagueController.js" defer></script>
     <script src="/js/getPlayerDetails.js" defer></script>
@@ -64,11 +64,11 @@
           <form name="game" role="form">
             <div class="form-input">
               <select class="form-input__select" ng-model="ctrl.player1" ng-options="player.name for player in ctrl.allPlayers">
-                <option ng-show="!model" value="">Look for player</option>
+                <option value="">Look for player</option>
               </select>
               <span class="form-input__copy--med">vs</span>
               <select class="form-input__select" ng-model="ctrl.player2" ng-options="player.name for player in ctrl.allPlayers">
-                <option ng-show="!model" value="">Look for player</option>
+                <option value="">Look for player</option>
               </select>
             </div>
             <div class="form-input">
